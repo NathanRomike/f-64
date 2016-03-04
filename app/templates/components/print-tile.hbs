@@ -1,1 +1,9 @@
-{{yield}}
+<img src="{{print.url}}"/>
+{{#if showDetail}}
+  <div class="modal-body">
+    <p>{{print.title}}</p>
+  </div>
+{{else}}
+<br>
+<br>
+{{/if}}

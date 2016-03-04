@@ -1,5 +1,9 @@
 $navbar-padding-vertical: 15px;
 
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+
 @import "bootstrap";
 @import "ember-power-select";
 
@@ -10,4 +14,8 @@ $navbar-padding-vertical: 15px;
       color: white;
     }
   }
+}
+
+img {
+  width: 100%;
 }
