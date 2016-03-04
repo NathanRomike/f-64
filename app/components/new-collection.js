@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  confirmatonAlert: false,
+
   actions: {
     saveCollection() {
       var params = {
@@ -10,6 +12,7 @@ export default Ember.Component.extend({
         prints: []
       };
       this.sendAction('saveCollection', params);
+      this.set('confirmatonAlert', true);
     }
   }
 });

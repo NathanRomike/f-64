@@ -1,12 +1,19 @@
+{{#if confirmatonAlert}}
+  <div class="alert alert-success alert-dismissible fade in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">x</span>
+    </button>
+    <strong>New print has been added to collection!</strong>
+  </div>
+{{/if}}
+
 <form>
   <div class="form-group">
     <label for="collection">Select Collection</label>
-    {{#power-select options=collections selected=collection placeholder="Select Collection" onchange=(action 'selectCollection') as |collection|}}
-      {{collection}}
+    {{#power-select options=collections selected=collection placeholder="Select Collection" required="true" onchange=(action 'selectCollection') as |collection|}}
+      {{collection.name}}
     {{/power-select}}
   </div>
-
-  {{log collections}}
 
   <div class="form-group">
     <label for="date">Print Date (Year)</label>

@@ -1,10 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  confirmatonAlert: false,
   collections: [],
 
   actions: {
-    selectCollection() {
+    selectCollection(collection) {
       this.set('collection', collection);
     },
 
@@ -20,6 +21,7 @@ export default Ember.Component.extend({
         quantity: this.get('quantity')
       };
       this.sendAction('savePrint', params);
+      this.set('confirmatonAlert', true);
     }
   }
 });
