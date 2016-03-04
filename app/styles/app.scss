@@ -1,0 +1,12 @@
+$navbar-padding-vertical: 15px;
+
+@import "bootstrap";
+
+.navbar {
+  .container {
+    background-color: green;
+    .brand {
+      color: white;
+    }
+  }
+}
