@@ -1,7 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  collections: [],
+
   actions: {
+    selectCollection() {
+      this.set('collection', collection);
+    },
+
     savePrint() {
       var params = {
         collection: this.get('collection'),

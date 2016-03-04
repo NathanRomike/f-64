@@ -1,11 +1,12 @@
 <form>
   <div class="form-group">
     <label for="collection">Select Collection</label>
-    {{!#power-select options=collections selected=collection placeholder="Select Collection" onchange=(action 'selectCollection') as |collection|}}
-      {{!collection}}
-    {{!/power-select}}
-    {{input value=collection id="collection" class="form-control" type="text" placeholder="Collection (make me a power select!)"}}
+    {{#power-select options=collections selected=collection placeholder="Select Collection" onchange=(action 'selectCollection') as |collection|}}
+      {{collection}}
+    {{/power-select}}
   </div>
+
+  {{log collections}}
 
   <div class="form-group">
     <label for="date">Print Date (Year)</label>
