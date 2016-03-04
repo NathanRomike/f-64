@@ -1,0 +1,46 @@
+<form>
+  <div class="form-group">
+    <label for="collection">Select Collection</label>
+    {{!#power-select options=collections selected=collection placeholder="Select Collection" onchange=(action 'selectCollection') as |collection|}}
+      {{!collection}}
+    {{!/power-select}}
+    {{input value=collection id="collection" class="form-control" type="text" placeholder="Collection (make me a power select!)"}}
+  </div>
+
+  <div class="form-group">
+    <label for="date">Print Date (Year)</label>
+    {{input value=date id="date" class="form-control" type="number" placeholder="Print Date (year)"}}
+  </div>
+
+  <div class="form-group">
+    <label for="price">Print Price</label>
+    {{input value=price id="price" class="form-control" type="number" placeholder="Print Price"}}
+  </div>
+
+  <div class="form-group">
+    <label for="size">Print Size</label>
+    {{input value=size id="size" class="form-control" type="text" placeholder="Print Size"}}
+  </div>
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    {{input value=title id="title" class="form-control" type="text" placeholder="Title"}}
+  </div>
+
+  <div class="form-group">
+    <label for="type">Print Type</label>
+    {{input value=type id="type" class="form-control" type="text" placeholder="Print Type"}}
+  </div>
+
+  <div class="form-group">
+    <label for="url">Print URL</label>
+    {{input value=url id="url" class="form-control" type="url" placeholder="Print URL"}}
+  </div>
+
+  <div class="form-group">
+    <label for="quantity">Prints Available</label>
+    {{input value=quantity id="quantity" class="form-control" type="number" placeholder="Prints Available"}}
+  </div>
+
+  <button {{action 'savePrint'}} class="btn btn-success">Save Print!</button>
+</form>
