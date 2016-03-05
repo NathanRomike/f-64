@@ -1,7 +1,6 @@
-{{!display-cart}}
-<div class="row">
+<div class="print-tile row">
   {{#each model as |print|}}
-    <div class="col-md-3">
+    <div class="col-sm-4">
       <a data-toggle="modal" data-target={{concat "#modal" print.id}}>
         {{print-tile print=print}}
       </a>

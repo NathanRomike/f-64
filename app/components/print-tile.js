@@ -12,7 +12,6 @@ export default Ember.Component.extend({
 
   actions: {
     add(print) {
-      console.log(this.get('shoppingCart'));
       this.get('shoppingCart').add(print);
     },
 

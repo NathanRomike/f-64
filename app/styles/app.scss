@@ -5,13 +5,25 @@ $border-radius-base: 0;
 $border-radius-large: 0;
 $border-radius-small: 0;
 
+$green: #43A047;
+
+$brand-success: $green;
+
 @import "bootstrap";
 @import "ember-power-select";
 
 .navbar {
   .container {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: $green;
+    .navbar-header .glyphicon {
+      font-size: 28px;
+      text-align: right;
+      right: 8px;
+      margin-top: 10px;
+      float: right;
+      color: white;
+    }
     .brand {
       margin-top: 0px;
       padding-top: 0px;
@@ -21,21 +33,22 @@ $border-radius-small: 0;
   }
 }
 
-.imgHomepage {
-  transition: 2.5s ease;
-}
-
-.imgHomepage:hover {
-  -webkit-transform: scale(1.04);
-  -ms-transform: scale(1.04);
-  transform: scale(1.04);
-  transition: 1.5s ease;
-}
-
 img {
-  width: 100%;
   position: relative;
   z-index: 1;
+  width: 100%;
+}
+
+.imgHomepage {
+  transition: 4s ease;
+  max-width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.imgInTile {
+  width: 100%;
 }
 
 .close {
@@ -48,8 +61,17 @@ img {
 }
 
 .large-icon {
-  font-size: 30px;
-  margin: 5px;
+  font-size: 40px;
+  margin: 10px;
+}
+
+.glyphicon-triangle-bottom {
+  font-size: 80px;
+  clear: left;
+}
+
+.glyphicon-triangle-top {
+  font-size: 80px;
 }
 
 .modal-info {
@@ -58,5 +80,44 @@ img {
 }
 
 .modal-img-name {
-  padding-bottom: 10px;
+  padding-bottom: 0px;
+}
+
+.cart-button {
+  float: right;
+  clear: right;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+@media (min-width: 770px) {
+  img {
+    width: 650;
+  }
+
+  .imgHomepage {
+    -moz-column-count: 3;
+    -moz-column-gap: 5px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 5px;
+    column-count: 3;
+    column-gap: 5px;
+    width: 480px;
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .large-icon {
+    font-size: 30px;
+    margin: 5px;
+  }
+
+  .imgHomepage:hover {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.2, 1.2);
+    -ms-transform: translateZ(0) scale(1.2, 1.2);
+    transform: translateZ(0) scale(1.2, 1.2);
+    transition: 1.5s ease;
+  }
 }

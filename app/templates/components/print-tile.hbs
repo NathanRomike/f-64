@@ -4,14 +4,19 @@
     <img class="imgInTile" src="{{print.url}}"/>
   </div>
   <div class="modal-body">
-    <p class="modal-img-name"><strong>{{print.title}}</strong></p>
-    <p class="modal-artist-name"><strong>By: {{print.collection.artist}}</strong></p>
-    <p class="modal-info">{{print.date}}</p>
-    <p class="modal-info">{{print.type}}</p>
-    <p class="modal-info">{{print.size}}</p>
+    <h6 class="modal-img-name">
+      {{print.title}}
+    </h6>
+    <h5 class="modal-artist-name">
+      {{print.collection.artist}}
+    </h5>
+    <p class="modal-info">{{print.date}} {{print.type}} {{print.size}}
+    </p>
     <p class="modal-info">{{printPrice}}</p>
     <br>
-    <button {{action 'add' print}} class="btn btn-success">Add to Cart</button>
+    <button {{action 'add' print}} class="cart-button btn btn-success">
+      <span class="large-icon glyphicon glyphicon-shopping-cart"></span>
+    </button>
     <br>
     {{#if moreButton}}
     <a {{action 'showDescription'}}><span class="glyphicon large-icon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
