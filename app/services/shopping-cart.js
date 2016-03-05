@@ -5,6 +5,5 @@ export default Ember.Service.extend({
 
   add(print) {
     this.get('prints').pushObject(print);
-    console.log("I got to the shopping cart");
   }
 });

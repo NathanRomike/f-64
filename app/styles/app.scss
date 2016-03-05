@@ -21,6 +21,17 @@ $border-radius-small: 0;
   }
 }
 
+.imgHomepage {
+  transition: 1.5s ease;
+}
+
+.imgHomepage:hover {
+  -webkit-transform: scale(1.079);
+  -ms-transform: scale(1.079);
+  transform: scale(1.079);
+  transition: .8s ease;
+}
+
 img {
   width: 100%;
   position: relative;

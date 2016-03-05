@@ -1,7 +1,7 @@
 {{#if showDetail}}
   <div class="modal-title">
     <button {{action 'hideDescription'}} type="button" class="close large-icon" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-    <img src="{{print.url}}"/>
+    <img class="imgInTile" src="{{print.url}}"/>
   </div>
   <div class="modal-body">
     <p class="modal-img-name"><strong>{{print.title}}</strong></p>
@@ -26,7 +26,7 @@
     </div>
   {{/if}}
 {{else}}
-<img src="{{print.url}}"/>
+<img class="imgHomepage" src="{{print.url}}"/>
 <br>
 <br>
 {{/if}}
