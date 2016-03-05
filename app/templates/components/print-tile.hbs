@@ -1,10 +1,30 @@
-<img src="{{print.url}}"/>
 {{#if showDetail}}
-  <div class="modal-body">
-    <p>{{print.title}}</p>
-    <p>{{printPrice}}</p>
+  <div class="modal-title">
+    <button type="button" class="close large-icon" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+    <img src="{{print.url}}"/>
   </div>
+  <div class="modal-body">
+    <p class="modal-img-name"><strong>{{print.title}}</strong></p>
+    <p class="modal-info">{{print.date}}</p>
+    <p class="modal-info">{{print.type}}</p>
+    <p class="modal-info">{{print.size}}</p>
+    <p class="modal-info">{{printPrice}}</p>
+    <br>
+    {{#if moreButton}}
+    <a {{action 'showDescription'}}><span class="glyphicon large-icon glyphicon-chevron-down" aria-hidden="true"></span></a>
+    {{else}}
+    <a {{action 'hideDescription'}}><span class="glyphicon large-icon glyphicon-chevron-up" aria-hidden="true"></span></a>
+    {{/if}}
+  </div>
+
+  {{#if showDescription}}
+    <div class="modal-body">
+      <h4>{{print.collection.name}}</h4>
+      <p>{{print.collection.description}}</p>
+    </div>
+  {{/if}}
 {{else}}
+<img src="{{print.url}}"/>
 <br>
 <br>
 {{/if}}

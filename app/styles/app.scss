@@ -9,6 +9,7 @@ $border-radius-small: 0;
 
 .navbar {
   .container {
+    width: 100%;
     background-color: #4CAF50;
     .brand {
       color: white;
@@ -18,4 +19,29 @@ $border-radius-small: 0;
 
 img {
   width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.close {
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  opacity: 1;
+  right: 30px;
+  position: absolute;
+  z-index: 2;
+}
+
+.large-icon {
+  font-size: 30px;
+  margin: 5px;
+}
+
+.modal-info {
+  margin: 0px;
+  font-size: 12px;
+}
+
+.modal-img-name {
+  padding-bottom: 10px;
 }
