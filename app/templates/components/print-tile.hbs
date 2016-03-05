@@ -1,6 +1,6 @@
 {{#if showDetail}}
   <div class="modal-title">
-    <button type="button" class="close large-icon" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+    <button {{action 'hideDescription'}} type="button" class="close large-icon" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
     <img src="{{print.url}}"/>
   </div>
   <div class="modal-body">
@@ -10,10 +10,12 @@
     <p class="modal-info">{{print.size}}</p>
     <p class="modal-info">{{printPrice}}</p>
     <br>
+    <button {{action 'add' print}} class="btn btn-success">Add to Cart</button>
+    <br>
     {{#if moreButton}}
-    <a {{action 'showDescription'}}><span class="glyphicon large-icon glyphicon-chevron-down" aria-hidden="true"></span></a>
+    <a {{action 'showDescription'}}><span class="glyphicon large-icon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
     {{else}}
-    <a {{action 'hideDescription'}}><span class="glyphicon large-icon glyphicon-chevron-up" aria-hidden="true"></span></a>
+    <a {{action 'hideDescription'}}><span class="glyphicon large-icon glyphicon-triangle-top" aria-hidden="true"></span></a>
     {{/if}}
   </div>
 

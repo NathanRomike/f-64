@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  shoppingCart: Ember.inject.service(),
   showDescription: false,
   moreButton: true,
 
@@ -9,6 +10,11 @@ export default Ember.Component.extend({
   }),
 
   actions: {
+    add(print) {
+      console.log(this.get('shoppingCart'));
+      this.get('shoppingCart').add(print);
+    },
+
     showDescription() {
       this.set('showDescription', true);
       this.set('moreButton', false);
