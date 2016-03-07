@@ -10,9 +10,19 @@
         </ul>
       </div> -->
 
+      <div class="shopping-cart-display">
+        {{#link-to 'view-cart'}}
+        <span class="large-icon glyphicon glyphicon-shopping-cart"></span>
+        {{display-cart}}
+        {{/link-to}}
+      </div>
+
       <a><span class="glyphicon glyphicon-align-right"></span></a>
       <br>
-      <a class="navbar-brand" href="/"><h1 class="brand">f/64</h1></a>
+
+      {{#link-to 'index'}}
+        <a class="navbar-brand"><h1 class="brand">f/64</h1></a>
+      {{/link-to}}
     </div>
 
     <ul class="nav">

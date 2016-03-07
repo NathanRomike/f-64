@@ -1,3 +1,3 @@
-{{#each shopping-cart.items as |item|}}
-  {{item.name}} -- {{item.price}}
-{{/each}}
+{{#if shoppingCart.prints.length}}
+  <span class="badge">{{shoppingCart.prints.length}}</span>
+{{/if}}

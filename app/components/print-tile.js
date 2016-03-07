@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   moreButton: true,
 
   printPrice: Ember.computed('printPrice', function() {
-    return '$' + this.get('print.price');
+    return '$' + this.get('print.price').toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }),
 
   actions: {

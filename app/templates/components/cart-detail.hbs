@@ -1,0 +1,15 @@
+{{#if shoppingCart.prints.length}}
+  <h3>Cart:</h3>
+
+  {{#each shoppingCart.prints as |print|}}
+    <p>{{print.title}}: ${{print.price}}</p>
+  {{/each}}
+
+  <h3>Cart Total:</h3>
+  <h5>${{total-cart shoppingCart.prints}}</h5>
+{{else}}
+  <h3>Your cart is empty!</h3>
+  {{#link-to 'index'}}
+    <a>Return to our gallery</a>
+  {{/link-to}}
+{{/if}}
