@@ -10,6 +10,11 @@ export default Ember.Component.extend({
     return '$' + this.get('print.price').toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }),
 
+  formatDescription: Ember.computed('formatDescription', function() {
+    var description = this.get('print.collection.description');
+    return Ember.String.htmlSafe(description.replace(/#p\b/g, `<br>`));
+  }),
+
   actions: {
     add(print) {
       this.get('shoppingCart').add(print);
