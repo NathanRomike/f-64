@@ -12,7 +12,7 @@ export default Ember.Component.extend({
 
   formatDescription: Ember.computed('formatDescription', function() {
     var description = this.get('print.collection.description');
-    return Ember.String.htmlSafe(description.replace(/#p\b/g, `<br>`));
+    return Ember.String.htmlSafe(description.replace(/#p\b/g, `<br><br>`));
   }),
 
   actions: {
