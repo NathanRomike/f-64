@@ -90,9 +90,29 @@ img {
   margin-top: 30px;
 }
 
+  .glyphicon-shopping-cart {
+    float: right;
+    position: relative;;
+  }
+
+  .badge {
+    float: right;
+    position: absolute;
+    bottom: 11px;
+    right: 0.2px;
+  }
+
+
+
 @media (min-width: 770px) {
   img {
     width: 650;
+  }
+
+  .badge {
+    float: left;
+    position: absolute;
+    bottom: 11px;
   }
 
   .imgHomepage {
@@ -108,10 +128,10 @@ img {
     width: 100%;
   }
 
-  .large-icon {
-    font-size: 30px;
-    margin: 5px;
-  }
+  // .large-icon {
+  //   font-size: 30px;
+  //   margin: 5px;
+  // }
 
   .imgHomepage:hover {
     -webkit-backface-visibility: hidden;
