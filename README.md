@@ -26,8 +26,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/NathanRomike/message-board.git` this repository
-* change into the new directory
+* `git clone https://github.com/NathanRomike/f-64.git` this repository
+* `cd f-64`
 * `npm install`
 * `bower install`
 
