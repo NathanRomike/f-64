@@ -5,9 +5,9 @@ $border-radius-base: 0;
 $border-radius-large: 0;
 $border-radius-small: 0;
 
-$green: #455A64;
+$primary-color: #455A64;
 
-$brand-success: $green;
+$brand-success: $primary-color;
 
 @import "bootstrap";
 @import "ember-power-select";
@@ -15,7 +15,7 @@ $brand-success: $green;
 .navbar {
   .container {
     width: 100%;
-    background-color: $green;
+    background-color: $primary-color;
     .navbar-header {
       display: block;
 
@@ -35,17 +35,15 @@ $brand-success: $green;
 }
 
 img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
+  width: 106%;
+  height: 106%;
+  padding: inherit;
+  margin: 0px;
 }
 
 .imgHomepage {
   transition: 4s ease;
-  max-width: 600px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto
+  display: flex;
 }
 
 .imgInTile {
@@ -63,16 +61,16 @@ img {
 
 .large-icon {
   font-size: 40px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .glyphicon-triangle-bottom {
-  font-size: 80px;
+  font-size: 40px;
   clear: left;
 }
 
 .glyphicon-triangle-top {
-  font-size: 80px;
+  font-size: 40px;
 }
 
 .modal-info {
