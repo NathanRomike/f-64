@@ -1,6 +1,8 @@
 # f/64
 
-f/64 is an e-commerce web application where art prints can be viewed and purchased. Written in Javascript, utilizing the Ember framework. [View f/64](https://green-sky.firebaseapp.com/) deployed on firebase.
+Modeled after The House of Medici concept, f/64 is a place where artists can publish information about projects or works to receive donations or commission work.
+
+Written in Javascript, utilizing the Ember framework. [View f/64](https://green-sky.firebaseapp.com/) deployed on firebase.
 
 ## Technologies Used
 
