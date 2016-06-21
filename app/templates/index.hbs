@@ -1,16 +1,28 @@
-<div class="print-tile row">
-  {{#each model as |print|}}
-    <div class="col-sm-4">
-      <a data-toggle="modal" data-target={{concat "#modal" print.id}}>
-        {{print-tile print=print}}
-      </a>
-      <div class="modal fade" id={{concat "modal" print.id}} tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            {{print-tile print=print showDetail="showDetail"}}
+<section class="fullscreen-banner">
+  <div class="banner-cover">
+    <a href="#" class="cover-link"></a>
+  </div>
+  <div class="banner-content">
+    <h1>f/64</h1>
+    <h2>Support Artists - Support Creativity</h2>
+  </div>
+</section>
+
+<section class="artist-list">
+  <div class="tile-row">
+    {{#each model as |print|}}
+      <div class="col-sm-4">
+        <a data-toggle="modal" data-target={{concat "#modal" print.id}}>
+          {{print-tile print=print}}
+        </a>
+        <div class="modal fade" id={{concat "modal" print.id}} tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              {{print-tile print=print showDetail="showDetail"}}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  {{/each}}
-</div>
+    {{/each}}
+  </div>
+</section>
