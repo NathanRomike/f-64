@@ -10,6 +10,10 @@
 
 <section class="artist-list">
   <div class="tile-row">
+    <div class="col-md-6 info-tile">
+      <h1>Supporters:</h1>
+      <h2>Want to fund an artists' project? <br> Donate to see the work come to life.</h2>
+    </div>
     {{#each model as |print|}}
       <div class="col-md-6">
         <a data-toggle="modal" data-target={{concat "#modal" print.id}}>
@@ -24,5 +28,9 @@
         </div>
       </div>
     {{/each}}
+    <div class="col-md-6 info-tile">
+      <h1>Artists:</h1>
+      <h2>Submit your next project proposal <br> and a bit about yourself.</h2>
+    </div>
   </div>
 </section>
