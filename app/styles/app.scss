@@ -1,6 +1,3 @@
-$navbar-padding-vertical: 0px;
-$navbar-height: 30px;
-
 $border-radius-base: 0;
 $border-radius-large: 0;
 $border-radius-small: 0;
@@ -25,7 +22,6 @@ section {
   padding: 0 0%;
   display: table;
   margin: 0;
-  margin-bottom: -86px;
   max-width: none;
   height: 90vh;
 }
@@ -37,29 +33,28 @@ section {
     position: absolute;
     overflow: hidden;
     width: 100%;
-    height: 700px;
+    height: 90vh;
     background-repeat: no-repeat;
     background-position: center center;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
   }
 
   .banner-content {
-    padding-top: 310px;
     padding-left: 2%;
     color: white;
+    height: 90vh;
     position: relative;
+    display: table-cell;
+    vertical-align: bottom;
     h1 {
       font-size: 200px;
     }
     h2 {
       font-size: 70px;
+      padding-bottom: 10px;
     }
   }
 }
@@ -68,14 +63,25 @@ section {
 }
 
 .col-md-6 {
+  // margin-bottom: -20px;
   padding: 1px;
-  margin-top: -20px;
-  overflow-y: hidden;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .imgHomepage {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-filter: grayscale(100%);
+}
+
+.imgHomepage:hover {
+  -webkit-filter: grayscale(0%);
 }
 
 .admin-page {
@@ -98,141 +104,11 @@ section {
 
 }
 
-// .artist-list {
-//   display: -ms-flex;
-// 	display: -webkit-flex;
-// 	display: flex;
-//   -webkit-flex-direction: column;
-//   flex-direction: column;
-// }
-
-
-
-// img {
-//   width: 106%;
-//   height: 106%;
-//   padding: inherit;
-//   margin: 0px;
-// }
-//
-// .imgHomepage {
-//   transition: 4s ease;
-//   display: flex;
-// }
-//
-// .imgInTile {
-//   width: 100%;
-// }
-//
-// .close {
-//   color: #fff;
-//   text-shadow: 2px 2px 2px #000;
-//   opacity: 1;
-//   right: 30px;
-//   position: absolute;
-//   z-index: 2;
-// }
-//
-// .large-icon {
-//   font-size: 40px;
-//   margin: 5px;
-// }
-//
-// .glyphicon-triangle-bottom {
-//   font-size: 40px;
-//   clear: left;
-// }
-//
-// .glyphicon-triangle-top {
-//   font-size: 40px;
-// }
-//
-// .modal-info {
-//   margin: 0px;
-//   font-size: 12px;
-// }
-//
-// .modal-img-name {
-//   padding-bottom: 0px;
-// }
-
-// .cart-button {
-//   float: right;
-//   clear: right;
-//   margin-right: 10px;
-//   margin-top: 30px;
-// }
-//
-//   .glyphicon-shopping-cart {
-//     float: right;
-//     position: relative;
-//   }
-
-  // .badge {
-  //   float: right;
-  //   position: absolute;
-  //   bottom: 11px;
-  //   right: 0.2px;
-  // }
-
-
-
-// @media (min-width: 770px) {
-//   img {
-//     width: 650;
-//   }
-//
-//   .badge {
-//     float: left;
-//     position: absolute;
-//     bottom: 11px;
-//   }
-//
-//   .imgHomepage {
-//     -moz-column-count: 3;
-//     -moz-column-gap: 5px;
-//     -webkit-column-count: 3;
-//     -webkit-column-gap: 5px;
-//     column-count: 3;
-//     column-gap: 5px;
-//     width: 480px;
-//     display: inline-block;
-//     margin-bottom: 10px;
-//     width: 100%;
-//   }
-//
-//   // .large-icon {
-//   //   font-size: 30px;
-//   //   margin: 5px;
-//   // }
-//
-//   .imgHomepage:hover {
-//     -webkit-backface-visibility: hidden;
-//     -webkit-transform: translateZ(0) scale(1.2, 1.2);
-//     -ms-transform: translateZ(0) scale(1.2, 1.2);
-//     transform: translateZ(0) scale(1.2, 1.2);
-//     transition: 1.2s ease;
-//   }
-// }
-
-// .navbar {
-//   .container {
-//     width: 100%;
-//     background-color: $primary-color;
-//     .navbar-header {
-//       display: block;
-//
-//       .glyphicon {
-//         color: white;
-//         margin-top: 0px;
-//         padding-top: 0px;
-//         display: none;
-//       }
-//     }
-//     .brand {
-//       color: white;
-//       margin-top: 0px;
-//       padding-top: 0px;
-//     }
-//   }
-// }
+.close {
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  opacity: 1;
+  right: 30px;
+  position: absolute;
+  z-index: 2;
+}
