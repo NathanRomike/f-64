@@ -12,11 +12,7 @@ export default Ember.Route.extend({
 
     savePrint(params) {
       var newPrint = this.store.createRecord('print', params);
-      var collection = params.collection;
-      collection.get('prints').addObject(newPrint);
-      newPrint.save().then(function() {
-        return collection.save();
-      });
+      newPrint.save();
     }
   }
 });

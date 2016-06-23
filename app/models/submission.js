@@ -6,6 +6,5 @@ export default DS.Model.extend({
   bio: DS.attr(),
   description: DS.attr(),
   coverImgUrl: DS.attr(),
-  addImgs: DS.attr(),
-  artFormat: DS.attr()
+  addImgs: DS.attr()
 });

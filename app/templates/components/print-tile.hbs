@@ -1,18 +1,18 @@
 {{#if showDetail}}
   <div class="modal-title">
     <button {{action 'hideDescription'}} type="button" class="close large-icon" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-    <img class="imgInTile" src="{{print.url}}"/>
+    <img class="imgInTile" src="{{print.coverImgUrl}}"/>
   </div>
   <div class="modal-body">
     <h6 class="modal-img-name">
-      {{print.title}}
+      {{print.name}}
     </h6>
     <h5 class="modal-artist-name">
-      {{print.collection.artist}}
+      {{print.name}}
     </h5>
-    <p class="modal-info">{{print.date}} {{print.type}} {{print.size}}
+    <p class="modal-info">{{print.artFormat}}
     </p>
-    <p class="modal-info">{{printPrice}}</p>
+    <p class="modal-info">{{print.description}}</p>
     <br>
     <button {{action 'add' print}} class="cart-button btn btn-success">
       <span class="large-icon glyphicon glyphicon-shopping-cart"></span>
@@ -27,13 +27,13 @@
 
   {{#if showDescription}}
     <div class="modal-body">
-      <h4>{{print.collection.name}}</h4>
+      <h4>{{print.name}}</h4>
       <p>{{formatDescription}}</p>
     </div>
   {{/if}}
 {{else}}
 <div class="image">
-  <img class="imgHomepage" src="{{print.url}}"/>
+  <img class="imgHomepage" src="{{print.coverImgUrl}}"/>
   <div class="overlay"></div>
 </div>
 {{/if}}

@@ -3,54 +3,51 @@
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">x</span>
     </button>
-    <strong>New print has been added to collection!</strong>
+    <strong>Thank you for you application. You will hear back from us shortly.</strong>
   </div>
 {{/if}}
 
 <form>
+  <h1>New Artist Submission</h1>
   <div class="form-group">
-    <label for="collection">Select Collection</label>
-    {{#power-select options=collections selected=collection placeholder="Select Collection" required="true" onchange=(action 'selectCollection') as |collection|}}
-      {{collection.name}}
-    {{/power-select}}
+    <label for="name">Full Name:</label>
+    {{input value=name id="name" class="form-control" type="text" placeholder="Name"}}
   </div>
 
   <div class="form-group">
-    <label for="date">Print Date (Year)</label>
-    {{input value=date id="date" class="form-control" type="number" placeholder="Print Date (year)"}}
+    <label for="email">Email Address:</label>
+    {{input value=email id="email" class="form-control" type="text" placeholder="Electronic Mail Address"}}
   </div>
 
   <div class="form-group">
-    <label for="price">Print Price</label>
-    {{input value=price id="price" class="form-control" type="number" placeholder="Print Price"}}
+    <label for="coverImgUrl">Cover Image URL:</label>
+    {{input value=coverImgUrl id="coverImgUrl" class="form-control" type="text" placeholder="Cover Image URL"}}
+    <p>*Please upload photos to <a href="https://postimg.org/files.php">PostImage.org</a>*</p>
   </div>
 
   <div class="form-group">
-    <label for="size">Print Size</label>
-    {{input value=size id="size" class="form-control" type="text" placeholder="Print Size"}}
+    <label for="addImgs">Additional Image URLs:</label>
+    {{input value=addImgs id="addImgs" class="form-control" type="text" placeholder="Additional Images"}}
   </div>
 
   <div class="form-group">
-    <label for="title">Title</label>
-    {{input value=title id="title" class="form-control" type="text" placeholder="Title"}}
+    <label for="artFormat">Art Format (i.e. Sculpting, Photography):</label>
+    {{input value=artFormat id="artFormat" class="form-control" type="artFormat" placeholder="Art Format"}}
   </div>
 
   <div class="form-group">
-    <label for="type">Print Type</label>
-    {{input value=type id="type" class="form-control" type="text" placeholder="Print Type"}}
+    <label for="bio">Describe Yourself:</label>
+    {{textarea value=bio id="bio" rows="6" class="form-control" placeholder="Your Bio"}}
+    <p>*Place '#p' at the start of new paragraphs*</p>
   </div>
 
   <div class="form-group">
-    <label for="url">Print URL</label>
-    {{input value=url id="url" class="form-control" type="url" placeholder="Print URL"}}
-  </div>
-
-  <div class="form-group">
-    <label for="quantity">Prints Available</label>
-    {{input value=quantity id="quantity" class="form-control" type="number" placeholder="Prints Available"}}
+    <label for="description">Describe Your Work:</label>
+    {{textarea value=description id="description" rows="6" class="form-control" placeholder="Creative description..."}}
+    <p>*Place '#p' at the start of new paragraphs*</p>
   </div>
 
   <div class="button">
-    <button {{action 'savePrint'}} class="btn btn-success">Save Print!</button>
+    <button {{action 'savePrint'}} class="btn btn-success">Upload Artist</button>
   </div>
 </form>
