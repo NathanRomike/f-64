@@ -140,6 +140,11 @@ section {
   }
 }
 
+.modal-body {
+  background: #192F53;
+  color: white;
+}
+
 .admin-page {
   padding: 15px;
   color: white;
@@ -174,5 +179,22 @@ section {
   h1 {
     margin-top: 0px;
     padding-top: 30vh;
+  }
+}
+
+footer {
+  background: #2ba77b;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a { text-decoration: none; color: white;}
+  a:link { text-decoration: none; color : white; border: 0px; -moz-outline-style: none;}
+  a:active { text-decoration: none; color : white; border: 0px; -moz-outline-style: none;}
+  a:visited { text-decoration: none; color : white; border: 0px; -moz-outline-style: none;}
+  a:hover { text-decoration: none; color : $primary-color; border: 0px; -moz-outline-style: none;}
+  a:focus { outline: none;-moz-outline-style: none;}
+  h1 {
+    margin: 10px;
   }
 }
