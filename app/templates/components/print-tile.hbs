@@ -1,6 +1,8 @@
 {{#if showDetail}}
   <div class="modal-title">
-    <button {{action 'hideDescription'}} type="button" class="close large-icon" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+    <div class="close-button">
+      <button {{action 'hideDescription'}} type="button" class="close large-icon" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+    </div>
     <img class="imgInTile" src="{{print.coverImgUrl}}"/>
   </div>
   <div class="modal-body">
@@ -10,17 +12,22 @@
     <p class="modal-info">{{print.artFormat}}</p>
     <p class="modal-info">{{print.description}}</p>
     <br>
-    <h6>Donate $1</h6>
-    <button {{action 'add' print}} class="cart-button btn btn-success">
-      <span class="large-icon glyphicon glyphicon-piggy-bank"></span>
-    </button>
-    <br>
-    <h6>{{print.name}}'s Bio:</h6>
-    {{#if moreButton}}
-    <a {{action 'showDescription'}}><span class="glyphicon large-icon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
-    {{else}}
-    <a {{action 'hideDescription'}}><span class="glyphicon large-icon glyphicon-triangle-top" aria-hidden="true"></span></a>
-    {{/if}}
+    <div class="modal-buttons">
+      <button {{action 'add' print}} class="cart-button btn btn-success">
+        <h4>Donate $1 <span class="large-icon glyphicon glyphicon-piggy-bank"></span></h4>
+      </button>
+      <br>
+      {{#if moreButton}}
+
+        <button {{action 'showDescription'}} class="bio-btn btn btn-success">
+          <h4>See {{print.name}}'s Bio <span class="glyphicon glyphicon-ice-lolly" aria-hidden="true"></span></h4>
+        </button>
+      {{else}}
+        <button {{action 'hideDescription'}} class="bio-btn btn btn-success">
+          <h4>Away with this Bio! <span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span></h4>
+        </button>
+      {{/if}}
+    </div>
   </div>
 
   {{#if showDescription}}
