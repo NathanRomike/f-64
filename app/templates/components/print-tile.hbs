@@ -4,20 +4,18 @@
     <img class="imgInTile" src="{{print.coverImgUrl}}"/>
   </div>
   <div class="modal-body">
-    <h6 class="modal-img-name">
+    <h1 class="modal-artist-name">
       {{print.name}}
-    </h6>
-    <h5 class="modal-artist-name">
-      {{print.name}}
-    </h5>
-    <p class="modal-info">{{print.artFormat}}
-    </p>
+    </h1>
+    <p class="modal-info">{{print.artFormat}}</p>
     <p class="modal-info">{{print.description}}</p>
     <br>
+    <h6>Donate $1</h6>
     <button {{action 'add' print}} class="cart-button btn btn-success">
-      <span class="large-icon glyphicon glyphicon-shopping-cart"></span>
+      <span class="large-icon glyphicon glyphicon-piggy-bank"></span>
     </button>
     <br>
+    <h6>{{print.name}}'s Bio:</h6>
     {{#if moreButton}}
     <a {{action 'showDescription'}}><span class="glyphicon large-icon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
     {{else}}
@@ -27,8 +25,7 @@
 
   {{#if showDescription}}
     <div class="modal-body">
-      <h4>{{print.name}}</h4>
-      <p>{{formatDescription}}</p>
+      <p>{{formatBio}}</p>
     </div>
   {{/if}}
 {{else}}

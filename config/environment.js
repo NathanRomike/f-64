@@ -7,7 +7,7 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
       'script-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
-      'img-src': "'self' http://www.blueskygallery.org wss://*.blueskygallery.org"
+      'img-src': "'self' https://s20.postimg.org wss://*.blueskygallery.org"
     },
     firebase: 'https://green-sky.firebaseio.com/',
     baseURL: '/',

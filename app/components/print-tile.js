@@ -15,6 +15,11 @@ export default Ember.Component.extend({
     return Ember.String.htmlSafe(description.replace(/#p\b/g, `<br><br>`));
   }),
 
+  formatBio: Ember.computed('formatBio', function() {
+    var bio = this.get('print.bio');
+    return Ember.String.htmlSafe(bio.replace(/#p\b/g, `<br><br>`));
+  }),
+
   actions: {
     add(print) {
       this.get('shoppingCart').add(print);

@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  margin-top: 0;
+}
+
 section {
   width: 100%;
   padding: 0 0%;
@@ -63,6 +67,7 @@ section {
   margin-top: 2vh;
   text-align: center;
   align-items: center;
+  color: black;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -91,6 +96,10 @@ section {
   -ms-transition: all 1s ease;
   transition: all 1s ease;
   -webkit-filter: grayscale(100%);
+}
+
+.imgInTile {
+  width: 100%;
 }
 
 .imgHomepage:hover {

@@ -4,11 +4,12 @@
       <span aria-hidden="true">x</span>
     </button>
     <strong>Thank you for you application. You will hear back from us shortly.</strong>
+    {{#link-to "index"}}<h5>Back to Art!</h5>{{/link-to}}
   </div>
 {{/if}}
 
 <form>
-  <h1>New Artist Submission</h1>
+  <h1>New Artist Application</h1>
   <div class="form-group">
     <label for="name">Full Name:</label>
     {{input value=name id="name" class="form-control" type="text" placeholder="Name"}}
@@ -31,19 +32,19 @@
   </div>
 
   <div class="form-group">
-    <label for="artFormat">Art Format (i.e. Sculpting, Photography):</label>
-    {{input value=artFormat id="artFormat" class="form-control" type="artFormat" placeholder="Art Format"}}
+    <label for="artFormat">Art Format:</label>
+    {{input value=artFormat id="artFormat" class="form-control" type="artFormat" placeholder="i.e. Sculpting, Photography, ALL THE ART!"}}
   </div>
 
   <div class="form-group">
-    <label for="bio">Describe Yourself:</label>
-    {{textarea value=bio id="bio" rows="6" class="form-control" placeholder="Your Bio"}}
+    <label for="bio">Talk About Yourself:</label>
+    {{textarea value=bio id="bio" rows="3" class="form-control" placeholder="Tell us your background and why you love art."}}
     <p>*Place '#p' at the start of new paragraphs*</p>
   </div>
 
   <div class="form-group">
-    <label for="description">Describe Your Work:</label>
-    {{textarea value=description id="description" rows="6" class="form-control" placeholder="Creative description..."}}
+    <label for="description">Talk About Your Work:</label>
+    {{textarea value=description id="description" rows="3" class="form-control" placeholder="Describe what you'll be using your donations for."}}
     <p>*Place '#p' at the start of new paragraphs*</p>
   </div>
 

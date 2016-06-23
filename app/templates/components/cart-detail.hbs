@@ -1,15 +1,22 @@
 {{#if shoppingCart.prints.length}}
-  <h3>Cart:</h3>
+  <h3>Donations</h3>
+  <hr>
 
   {{#each shoppingCart.prints as |print|}}
-    <p>{{print.title}}: ${{print.price}}</p>
+    <p>{{print.name}}: $1</p>
   {{/each}}
 
-  <h3>Cart Total:</h3>
+  <h3>Total</h3>
+  <hr>
   <h5>${{total-cart shoppingCart.prints}}</h5>
+
+  <div class="button">
+    <button class="btn btn-success">Submit Payment</button>
+  </div>
+
 {{else}}
-  <h3>Your cart is empty!</h3>
+  <h3>Your donation list is empty.</h3>
   {{#link-to 'index'}}
-    <a>Return to our gallery</a>
+    <a>Return to gallery</a>
   {{/link-to}}
 {{/if}}

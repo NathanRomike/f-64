@@ -8,7 +8,6 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('admin');
   this.route('view-cart');
-  this.route('apply');
 });
 
 export default Router;

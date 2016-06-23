@@ -28,9 +28,13 @@
         </div>
       </div>
     {{/each}}
-    <div class="col-md-6 info-tile">
-      <h1>Artists:</h1>
-      <h2>Submit your next project proposal <br> and a bit about yourself.</h2>
-    </div>
+
+    {{#link-to 'admin'}}
+      <div class="col-md-6 info-tile">
+        <h1>Artists:</h1>
+        <h2>Submit your next project proposal <br> and a bit about yourself.</h2>
+      </div>
+    {{/link-to}}
+
   </div>
 </section>
