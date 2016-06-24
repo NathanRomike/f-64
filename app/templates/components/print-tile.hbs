@@ -13,12 +13,18 @@
     <p class="modal-info">{{print.description}}</p>
     <br>
     <div class="modal-buttons">
-      <button {{action 'add' print}} class="cart-button btn btn-success">
-        <h4>Donate $1 <span class="large-icon glyphicon glyphicon-piggy-bank"></span></h4>
-      </button>
+      {{#if notDonatingYet}}
+        <button {{action 'add' print}} class="cart-button btn btn-success">
+          <h4>Donate $1 <span class="large-icon glyphicon glyphicon-piggy-bank"></span></h4>
+        </button>
+      {{else}}
+        <button class="cart-button btn btn-success">
+          <h4>Artist Added <span class="large-icon glyphicon glyphicon-piggy-bank"></span></h4>
+        </button>
+      {{/if}}
+
       <br>
       {{#if moreButton}}
-
         <button {{action 'showDescription'}} class="bio-btn btn btn-success">
           <h4>See {{print.name}}'s Bio <span class="glyphicon glyphicon-ice-lolly" aria-hidden="true"></span></h4>
         </button>

@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   classNames: ['tile'],
   showDescription: false,
   moreButton: true,
+  notDonatingYet: true,
 
   printPrice: Ember.computed('printPrice', function() {
     return '$' + this.get('print.price').toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -23,6 +24,7 @@ export default Ember.Component.extend({
   actions: {
     add(print) {
       this.get('shoppingCart').add(print);
+      this.set('notDonatingYet', false);
     },
 
     showDescription() {

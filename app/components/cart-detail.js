@@ -2,6 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   shoppingCart: Ember.inject.service(),
+  paymentSubmitted: false,
+
+  actions: {
+    submitPayment() {
+      this.set('paymentSubmitted', true)
+    }
+  },
 
   printPrice: Ember.computed('printPrice', function() {
     console.log(this.get('shoppingCart'));
